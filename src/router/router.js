@@ -32,10 +32,15 @@ export default new Router({
       component: Calendar,
       path: "/"
     },
-      {
-        name: "",
-          component: EventForm,
-          path: "/event/add"
-      }
+    {
+      name: "eventAdd",
+      component: EventForm,
+      path: "/event/add"
+    },
+    {
+      name: "eventAdd",
+      component: EventForm,
+      path: "/event/add"
+    },
   ]
 });
