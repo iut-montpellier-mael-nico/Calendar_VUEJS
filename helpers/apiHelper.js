@@ -66,8 +66,10 @@ export const seConnecter = (email, pass) => {
     )
     .then(function(response) {
       console.log(response);
+      return response;
     })
     .catch(function(error) {
       console.error(error);
+      return error;
     });
 };
