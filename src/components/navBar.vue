@@ -89,7 +89,8 @@ export default {
       }
     },
     validationCreateUser() {
-      createUser(1, this.email, this.password)
+      console.log(this.email, this.password)
+      createUser(5, this.email, this.password)
       this.clear();
       this.$nextTick(() => {
         // Wrapped in $nextTick to ensure DOM is rendered before closing

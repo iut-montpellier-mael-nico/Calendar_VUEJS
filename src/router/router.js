@@ -4,6 +4,7 @@ import Register from "../components/Register.vue";
 import Login from "../components/Login.vue";
 import Calendar from "../components/Calendar.vue";
 import EventForm from "../components/EventForm.vue";
+import DetailEvent from "../components/DetailEvent.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -33,9 +34,9 @@ export default new Router({
       path: "/"
     },
     {
-      name: "eventAdd",
-      component: EventForm,
-      path: "/event/add"
+      name: "detailEvent",
+      component: DetailEvent,
+      path: "/event/:id"
     },
     {
       name: "eventAdd",

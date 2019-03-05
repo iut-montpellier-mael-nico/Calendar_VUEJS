@@ -40,8 +40,8 @@ export const createUser = (id, email, pass) => {
       "http://baron-guitard-calendrierapi.herokuapp.com/register",
       {
         id: id,
-        email: email,
-        pass: pass
+        mail: email,
+        password: pass
       },
       { withCredentials: true }
     )
@@ -59,13 +59,14 @@ export const seConnecter = (email, pass) => {
     .post(
       "http://baron-guitard-calendrierapi.herokuapp.com/login",
       {
-        email: email,
-        pass: pass
+        mail: email,
+        password: pass
       },
       { withCredentials: true }
     )
     .then(function(response) {
       console.log(response);
+      localStorage.token = response.data.jwt;
       return response;
     })
     .catch(function(error) {
